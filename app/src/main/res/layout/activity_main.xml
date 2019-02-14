@@ -23,4 +23,11 @@
         android:layout_height="wrap_content"
         android:onClick="BroadcastToOrdered"
         android:text="send Broadcast to Ordered" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="LocalBroadcast"
+        android:text="send Broadcast to Local" />
+
 </LinearLayout>

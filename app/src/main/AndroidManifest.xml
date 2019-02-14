@@ -46,6 +46,8 @@
                 <action android:name="INTENT.SUYICHEN.ORDERED"/>
             </intent-filter>
         </receiver>
+
+        <service android:name=".LocalService"/>
     </application>
 
 </manifest>
