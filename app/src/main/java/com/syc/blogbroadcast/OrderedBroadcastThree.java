@@ -12,7 +12,7 @@ import android.util.Log;
 public class OrderedBroadcastThree extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.d("OrderedBroadcast",this.getClass().getName()+"already received");
+        Log.e("OrderedBroadcast",this.getClass().getName()+"already received");
         abortBroadcast();//Intercept
     }
 }
