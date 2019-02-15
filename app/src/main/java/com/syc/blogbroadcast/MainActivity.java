@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String DYNAMIC_BROADCAST = "INTENT.SUYICHEN.DYNAMIC.BROADCAST";
     private static final String ORDERED_BROADCAST = "INTENT.SUYICHEN.ORDERED";
     private static final String LOCAL_BROADCAST = "INTENT.SUYICHEN.BROADCAST.LOCAL";
+    private static final String DOUBLE_ACTION_ONE = "INTENT.SUYICHEN.DOUBLE.ACTION.ONE";
+    private static final String DOUBLE_ACTION_TWO = "INTENT.SUYICHEN.DOUBLE.ACTION.TWO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void BroadcastToStatic(View view) {
-
         Intent intent = new Intent();
         intent.setAction(STATIC_BROADCAST);
         intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
@@ -45,5 +46,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void LocalBroadcast(View view) {
         LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(LOCAL_BROADCAST));
+    }
+
+    public void DoubleBroadcast1(View view) {
+        Intent intent = new Intent();
+        intent.setAction(DOUBLE_ACTION_ONE);
+        intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
+        sendBroadcast(intent);
+    }
+
+    public void DoubleBroadcast2(View view) {
+        Intent intent = new Intent();
+        intent.setAction(DOUBLE_ACTION_TWO);
+        intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
+        sendBroadcast(intent);
     }
 }

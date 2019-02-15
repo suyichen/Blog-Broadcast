@@ -30,4 +30,15 @@
         android:onClick="LocalBroadcast"
         android:text="send Broadcast to Local" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="DoubleBroadcast1"
+        android:text="send Broadcast to Double1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="DoubleBroadcast2"
+        android:text="send Broadcast to Double2" />
 </LinearLayout>

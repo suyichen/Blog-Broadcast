@@ -48,6 +48,13 @@
         </receiver>
 
         <service android:name=".LocalService"/>
+
+        <receiver android:name=".DoubleActionBroadcast">
+            <intent-filter>
+                <action android:name="INTENT.SUYICHEN.DOUBLE.ACTION.ONE"/>
+                <action android:name="INTENT.SUYICHEN.DOUBLE.ACTION.TWO"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
